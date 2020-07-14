@@ -1,0 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+import { PadawanService } from 'src/app/padawan.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+  
+  public nameDigitado: string;
+
+  constructor(private introducao: PadawanService) { }
+
+  ngOnInit(): void {
+  }
+  ngOnDestroy(){
+    if(this.nameDigitado != null){
+      this.introducao.setintroducao(this.nameDigitado);
+     }
+  }
+  
+
+  /*public updateName(){
+    if(this.nameDigitado != null){
+     this.introducao.setintroducao(this.nameDigitado);
+    }
+    else{
+      alert("Os campos são obrigatorios");
+    }
+   
+  }*/
+}
