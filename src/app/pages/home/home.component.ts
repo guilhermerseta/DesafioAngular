@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PadawanService } from 'src/app/padawan.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { PadawanService } from 'src/app/padawan.service';
 export class HomeComponent implements OnInit {
   
   public nameDigitado: string;
-
+  public date = new Date();
+ 
   constructor(private introducao: PadawanService) { }
 
   ngOnInit(): void {
@@ -19,15 +20,4 @@ export class HomeComponent implements OnInit {
       this.introducao.setintroducao(this.nameDigitado);
      }
   }
-  
-
-  /*public updateName(){
-    if(this.nameDigitado != null){
-     this.introducao.setintroducao(this.nameDigitado);
-    }
-    else{
-      alert("Os campos são obrigatorios");
-    }
-   
-  }*/
 }

@@ -5,16 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class PadawanService {
 
-  private introducao = "Olá , seja bem vindo ao nosso programa";
+  private introducao = "Olá, seja bem vindo ao nosso programa desafio onde tentamos executar as lições aprendidas no curso";
   
   constructor() { }
 
   getintroducao(){
-    return this.introducao;
+    console.error(this.introducao);
+    return this.introducao
   }
 
-  setintroducao(name:string){
-    this.introducao = "Olá "+name+", seja bem vindo ao nosso programa";
-    return this.introducao;
+  setintroducao(name:string){ 
+    this.introducao = "Olá "+name+", seja bem vindo ao nosso programa desafio onde tentamos executar as lições aprendidas no curso";
   }
 }

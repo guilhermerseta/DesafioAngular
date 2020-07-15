@@ -1,0 +1,20 @@
+.form-control{
+   display: inline;
+}
+
+#title{
+    margin-top: 50px;
+}
+
+#cadastro{
+    text-align: center;
+}
+
+.resposta{
+    color: white;
+}
+
+#message{
+    height: 150px;
+    width: 600px;
+}

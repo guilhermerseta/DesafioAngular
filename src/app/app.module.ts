@@ -8,6 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import {FormsModule} from '@angular/forms';
 import { PadawanService } from './padawan.service';
+import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,8 @@ import { PadawanService } from './padawan.service';
     CabecalhoComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
-    
+    HomeComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,

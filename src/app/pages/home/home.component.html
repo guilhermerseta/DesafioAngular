@@ -1,7 +1,11 @@
+<h1 id="title">Projeto Padawan</h1>
+<br><br>
 
-
-
+<h3>Olá, por favor digite o seu nome abaixo para melhorarmos nossa interação!</h3>
 <input type="text" [(ngModel)]="nameDigitado" class="form-control" placeholder="Insira seu nome"><br>
 
-<p *ngIf="nameDigitado">{{nameDigitado}}</p>
+<h4 *ngIf="nameDigitado">{{nameDigitado| uppercase}} agora é o seu momento.</h4>
+<h4>Na data {{ date | date: 'shortDate'}} ás {{date| date:'shortTime'}} você pode mudar sua vida!!</h4>
+
+<img src="https://media1.popsugar-assets.com/files/thumbor/ZZW1numDjY1oQIF4h6DncxtFAw8/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/09/27/859/n/24155406/8e79a59159cbfdfe86b8a9.76001991_il_fullxfull.1104865687_6mk8/i/Jedi-Padawan.jpg" class = "padawan">
 

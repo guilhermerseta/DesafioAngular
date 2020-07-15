@@ -1,29 +1,33 @@
-<h5>Contact Me</h5>
+<h1 id="title">Contact Me</h1><br><br>
 
-<br><br>
+<h5 id = "cadastro">Se você deseja se candidatar para o Projeto Padawan, por favor preencher os dados abaixo: </h5>
 
 <input type="text" [(ngModel)]="nomeDigitado" class="form-control" placeholder="Insira seu nome completo">
-<div class="input-group mb-3">
+
+<div class="input-group">
   <input type="text" [(ngModel)]="emailDigitado" class="form-control" placeholder="Insira seu Email">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default">@</span>
-      <select class = "form-control" id="email" nome = "email" >
-        <option value="1">hotmail.com</option>
-        <option value="2">gmail.com</option>
+      <select class = "form-control" id="email" nome = "email"[(ngModel)]="email" >
+        <option value="@hotmail.com">hotmail.com</option>
+        <option value="@gmail.com">gmail.com</option>
+        <option value="@yahoo.com.br">yahoo.com.br</option>
+        <option value="@bol.com.br">bol.com.br</option>
+        <option value="">Outros</option>
       </select>
     </div>
 </div>
-<input type="tel" tel = "phone_num" placeholder="(XX) XXXXX - XXXX" pattern = "[\(]\d{2}[\)]\d{5}[\-]\d{4}" required>
-<br>
 
-<p *ngIf="nomeDigitado">{{nomeDigitado}}</p>
-<p *ngIf="emailDigitado">{{emailDigitado}}@example.com</p>
+<input id="message" [(ngModel)]="mensagem" placeholder="Digite o motivo por qual quer se candidatar para o Padawan">
+<div class= "resposta">
+  <p *ngIf="nomeDigitado">{{nomeDigitado}}</p>
+  <p *ngIf="emailDigitado">{{emailDigitado}}</p>
+  <p *ngIf="email">{{email}}</p>
+  <p *ngIf="mensagem">{{mensagem | uppercase }}</p>
+</div><br>
 
+<button type="button" class="btn btn-dark" (click)="updateContactList()">Submit</button>
 
+<h6 *ngFor ="let contact of contactList">{{contact}}</h6>
 
-<button type="button" class="btn btn-light" (click)="updateContactList()">Submit</button>
-
-<div class="col">
-  <p *ngFor ="let contact of contactList">{{contact}}</p>
-</div>
  
