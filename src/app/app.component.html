@@ -1,6 +1,7 @@
 <div class = "board">
     <app-cabecalho></app-cabecalho>
     <router-outlet></router-outlet>
-    <app-rodape></app-rodape>
+    <app-rodape [name] = "name" (cidadeFit)="setCidade($event)"></app-rodape>
+    <h6>{{cidade}}</h6>
 </div> 
 

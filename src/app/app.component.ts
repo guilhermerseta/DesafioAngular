@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafio';
+
+  public cidade: string = "";
+  public name = "FIT";
+
+  public setCidade(texto:string){
+    this.cidade = texto;
+  }
 }

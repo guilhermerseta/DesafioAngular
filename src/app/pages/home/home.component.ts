@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
  
   constructor(private introducao: PadawanService) { }
   
-  @Output() name: string = "FIT";
 
   ngOnInit(): void {
   }
