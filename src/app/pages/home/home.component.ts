@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   public date = new Date();
  
   constructor(private introducao: PadawanService) { }
+  
+  @Output() name: string = "FIT";
 
   ngOnInit(): void {
   }

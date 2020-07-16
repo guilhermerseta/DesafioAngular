@@ -19,6 +19,7 @@
 </div>
 
 <input id="message" [(ngModel)]="mensagem" placeholder="Digite o motivo por qual quer se candidatar para o Padawan">
+
 <div class= "resposta">
   <p *ngIf="nomeDigitado">{{nomeDigitado}}</p>
   <p *ngIf="emailDigitado">{{emailDigitado}}</p>
@@ -29,5 +30,3 @@
 <button type="button" class="btn btn-dark" (click)="updateContactList()">Submit</button>
 
 <h6 *ngFor ="let contact of contactList">{{contact}}</h6>
-
- 

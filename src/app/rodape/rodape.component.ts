@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rodape',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class RodapeComponent implements OnInit {
 
   constructor() { }
+
+  @Input() name: string;
 
   ngOnInit(): void {
   }

@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   constructor(private introducao: PadawanService) { }
  
   public introduction: string;
- 
+
   ngOnInit(): void {
     this.introduction = this.introducao.getintroducao();
   }
